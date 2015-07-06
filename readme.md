@@ -5,6 +5,7 @@ The goal of this repo is to make the task of setting up a local dev box a non-is
 Once this install is done, the <local-dashboard> repository is great for setting up sites (nginx/homestead) and even generating new Laravel sites that display immediately.
 
 - [Installation](#installation)
+- [Things to note](#things-to-note)
 - [What is installed](#what-is-installed)
 
 # <a name="installation"></a> Installation
