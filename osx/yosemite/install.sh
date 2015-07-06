@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# Colors
+Color_Off='\033[0m'
+Yellow='\033[0;33m'
+Green='\033[1;32m'
+Cyan='\033[0;36m'
+
 echo 'Starting the installer...'
 
 ########################################################################################################
@@ -32,7 +38,7 @@ else
 fi
 
 read -p "Update homebrew [Y/N]?  " upbrew
-case upbrew in
+case $upbrew in
     [yY][eE][sS]|[yY])
         echo -e "${Green}Updating homebrew... $Color_Off"
         . update/homebrew.sh
@@ -92,8 +98,6 @@ else
     echo -e "${Cyan}Mysql already installed... $Color_Off"
 fi
 
-. install/mysql_database.sh
-
 ########################################################################################################
 ############ PHP
 ########################################################################################################
@@ -129,7 +133,7 @@ else
 fi
 
 read -p "Update npm [Y/N]?  " upnpm
-case upnpm in
+case $upnpm in
     [yY][eE][sS]|[yY])
         echo -e "${Green}Updating NPM... $Color_Off"
         . update/node.sh
@@ -172,5 +176,7 @@ user=`whoami`
 nginx=`which nginx`
 read -p "$user   ALL=(ALL) NOPASSWD: $nginx"
 sudo visudo
+
+. site.sh
 
 echo 'Finished with initial install!'

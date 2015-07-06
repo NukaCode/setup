@@ -18,9 +18,11 @@ SQL="${Q1}${Q2}${Q3}${Q4}"
 echo -e "${Yellow}Mysql is going to ask you for the root password.  By default, it is blank."
 $MYSQL -uroot -p -e "$SQL"
 
+cd $siteDir
 cp .env.example .env
 sed -i.bak s/{{DB_NAME}}/"$DB_NAME"/g .env
 sed -i.bak s/{{DB_USER}}/"$DB_USER"/g .env
 sed -i.bak s/{{DB_PASS}}/"$DB_PASS"/g .env
 
 rm -f .env.bak
+cd $localDir

@@ -24,19 +24,6 @@ curl -L https://gist.github.com/frdmn/7853158/raw/nginx.conf -o /usr/local/etc/n
 # Load php fpm
 curl -L https://gist.github.com/frdmn/7853158/raw/php-fpm -o /usr/local/etc/nginx/conf.d/php-fpm
 
-# Create a default virtual host
-# Set up the nginx config
-location=`pwd | sed 's/\\//\\\\\//g'`
-sed -e s/{{PATH}}/"$location"/g resources/scripts/install/default.template > resources/scripts/install/default
-
-# Move it to the proper location
-mv resources/scripts/install/default /usr/local/etc/nginx/sites-available/default
-
-git clone http://git.frd.mn/frdmn/nginx-virtual-host.git ~/Code
-rm -rf ~/Code.git
-
-ln -sfv /usr/local/etc/nginx/sites-available/default /usr/local/etc/nginx/sites-enabled/default
-
 # Start it
 sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist
 
