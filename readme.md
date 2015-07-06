@@ -6,19 +6,19 @@ To begin, download the zip/tar file that corresponds to the OS you will be runni
 
 ### Yosemite
 
-`curl -s <github link>`
-`unzip <filename>`
-`chmod 755 ./install.sh`
-`./install.sh`
+	curl -s <github link>
+	unzip <filename>
+	chmod 755 ./install.sh
+	./install.sh
 
 ## Ubuntu
 
 ### 14.04
 
-`curl -s <github link>`
-`tar -xvzf <filename>`
-`chmod 755 ./install.sh`
-`./install.sh`
+	curl -s <github link>
+	tar -xvzf <filename>
+	chmod 755 ./install.sh
+	./install.sh
 
 # Things to note
 
