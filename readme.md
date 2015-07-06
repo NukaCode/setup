@@ -16,8 +16,8 @@ To begin, download the zip/tar file that corresponds to the OS you will be runni
 
 ### Yosemite
 
-	curl -s <github link>
-	unzip <filename>
+	curl -LOk https://github.com/NukaCode/setup/raw/master/osx/yosemite/yosemite_install.zip
+	unzip yosemite_install.zip
 	chmod 755 ./install.sh
 	./install.sh
 
@@ -25,8 +25,8 @@ To begin, download the zip/tar file that corresponds to the OS you will be runni
 
 ### 14.04
 
-	curl -s <github link>
-	tar -xvzf <filename>
+	curl -LOk https://github.com/NukaCode/setup/raw/master/ubuntu/14.04/14.04_install.tar.gz
+	tar -xvzf 14.04_install.tar.gz
 	chmod 755 ./install.sh
 	./install.sh
 
