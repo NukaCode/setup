@@ -165,21 +165,6 @@ else
 fi
 
 ########################################################################################################
-############ Finishing the Site
-########################################################################################################
-echo -e "${Yellow}Downloading composer packages... $Color_Off"
-composer install
-echo -e "${Yellow}Generating a key... $Color_Off"
-php artisan key:generate
-echo -e "${Yellow}Gathering needed compoenents... $Color_Off"
-sudo npm install
-bower install
-echo -e "${Yellow}Running migrations... $Color_Off"
-php artisan migrate --seed
-composer dump-autoload -o
-php artisan optimize
-
-########################################################################################################
 ############ Grant the site visudo permission to nginx
 ########################################################################################################
 echo "Please add the following line at the end of the file that is about to pop up  [Press enter when ready]..."
