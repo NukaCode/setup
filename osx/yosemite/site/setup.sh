@@ -1,5 +1,7 @@
 #! /bin/bash
 
+cd $siteDir
+
 echo -e "${Yellow}Downloading composer packages... $Color_Off"
 composer install
 
@@ -16,3 +18,5 @@ php artisan migrate --seed
 echo -e "${Yellow}Running dump-autoload... $Color_Off"
 composer dump-autoload -o
 php artisan optimize
+
+cd $localDir

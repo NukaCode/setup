@@ -1,3 +1,3 @@
 #! /bin/bash
 
-git clone git@github.com:NukaCode/dasher.git $siteDir
+git clone https://github.com/NukaCode/dasher.git $siteDir
