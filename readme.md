@@ -16,10 +16,13 @@ To begin, download the zip/tar file that corresponds to the OS you will be runni
 
 ### Yosemite
 
-	curl -LOk https://github.com/NukaCode/setup/raw/master/osx/yosemite/yosemite_install.zip
+	curl -LOk https://github.com/NukaCode/setup/raw/master/osx/yosemite_install.zip
 	unzip yosemite_install.zip
-	chmod 755 ./install.sh
-	./install.sh
+	chmod -R 755 ./yosemite
+	cd yosemite
+	.install.sh
+	
+> To just install local dashboard run `.site.sh`
 
 ## Ubuntu
 
