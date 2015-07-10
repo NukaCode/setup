@@ -18,7 +18,7 @@ esac
 ############ Setting up
 ########################################################################################################
 localDir=`pwd`
-read -p "Where should the site be installed?  " siteDir
+read -p "Where should the site be installed? [Full path] " siteDir
 
 echo -e "${Green}Cloning the site to $siteDir... $Color_Off"
 . site/git.sh

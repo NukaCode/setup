@@ -3,9 +3,10 @@ server {
     server_name  localhost;
     root         {{PATH}}/public;
 
-    index index.html index.html index.php
+    index index.html index.html index.php;
 
-    access_log  /usr/local/etc/nginx/logs/default.access.log  main;
+    access_log  /usr/local/etc/nginx/logs/{{PORT}}-access.log  main;
+    error_log  /usr/local/etc/nginx/logs/{{PORT}}-error.log  error;
 
     location / {
         try_files $uri $uri/ /index.php?$query_string;
