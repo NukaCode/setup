@@ -18,8 +18,12 @@ sudo chown :staff ~/Code
 sudo chmod 775 ~/Code
 
 # Get default nginx.conf
+USER=`whoami`
 rm /usr/local/etc/nginx/nginx.conf
-curl -L https://gist.github.com/frdmn/7853158/raw/nginx.conf -o /usr/local/etc/nginx/nginx.conf
+mv ./files/nginx.conf /usr/local/etc/nginx/nginx.conf
+sudo touch /usr/local/etc/nginx/nginx.pid
+sudo chown $USER:admin /usr/local/etc/nginx/nginx.pid
+sudo chown $USER:admin /usr/local/var/log/nginx/error.log
 
 # Load php fpm
 curl -L https://gist.github.com/frdmn/7853158/raw/php-fpm -o /usr/local/etc/nginx/conf.d/php-fpm
