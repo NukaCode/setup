@@ -1,8 +1,10 @@
 #! /bin/bash
 
 mkdir -p ~/bin
-mv resources/scripts/global/git-cam ~/bin/git-cam
-mv resources/scripts/global/git-rename ~/bin/git-rename
+mv files/git-cam ~/bin/git-cam
+mv files/git-rename ~/bin/git-rename
+
+chmod 755 ~/bin/
 
 if [ -f ~/.bash_profile ]; then
     echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bash_profile
