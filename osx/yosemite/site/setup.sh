@@ -19,6 +19,6 @@ echo -e "${Yellow}Running dump-autoload... $Color_Off"
 composer dump-autoload -o
 php artisan optimize
 
-nohup php artisan queue:listen database --tries=3 --timeout=180 &
+nohup php artisan queue:listen database --tries=3 --timeout=180 &>/dev/null &
 
 cd $localDir
